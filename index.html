@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FotoLand - La Aventura Fotográfica</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            color: #4A148C;
+        }
+
+        /* Estilo del Menú */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background-color: #512DA8;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            background-color: #673AB7;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #9575CD;
+        }
+
+        .content {
+            margin-left: 280px;
+            padding: 30px;
+        }
+
+        /* Estilo de Secciones */
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tabla de contenido */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #512DA8;
+            color: white;
+        }
+
+        /* Foro */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #512DA8;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background-color: #673AB7;
+        }
+
+        /* Buscador */
+        #buscador input {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #buscador button {
+            background-color: #512DA8;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #buscador button:hover {
+            background-color: #673AB7;
+        }
+
+        /* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.imagen-item img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de las imágenes */
+    max-width: 150px; /* Limita el tamaño máximo de las imágenes */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.imagen-item img:hover {
+    transform: scale(1.05);
+}
+
+
+        .imagen-item img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>FotoLand</h2>
+        <a href="#contenido">📚 Contenido</a>
+        <a href="#foro">💬 Foro</a>
+        <a href="#musica">🎵 Música</a>
+        <a href="#buscador">🔍 Buscar</a>
+        <a href="#imagenes">📸 Galería</a>
+        <a href="#Videos Inspiradores sobre Fotografía">🎥 videos</a>
+    </div>
+
+    <div class="content">
+        <section id="contenido">
+            <h2>📚 Contenido sobre Fotografía</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Historia</th>
+                        <th>Evolución</th>
+                        <th>Tipos</th>
+                        <th>Tecnología</th>
+                        <th>Impacto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>La fotografía comenzó en el siglo XIX...</td>
+                        <td>Con el paso del tiempo, la tecnología mejoró...</td>
+                        <td>Fotografía digital, análoga, aérea...</td>
+                        <td>La cámara digital y los smartphones han cambiado todo...</td>
+                        <td>La fotografía ha tenido un gran impacto en el periodismo...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="foro">
+            <h2>💬 Foro de Fotografía</h2>
+            <form>
+                <input type="text" placeholder="Tu Nombre" required>
+                <textarea placeholder="Tu Pregunta/Comentario" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="musica">
+            <h2>🎵 Música para la Creatividad</h2>
+            <audio controls>
+                <source src="musica/Ed Sheeran - photograph  sub español.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <audio controls>
+                <source src="musica/Canción para modelar en tu cuarto a las 3 a.m..mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+       <!-- Sección del Generador de Frases -->
+<section id="buscador">
+    <h2>🖼️ Generador de Frases para tu Próxima Foto🖼️</h2>
+    <button onclick="mostrarMensaje()">Generar Frase</button>
+    <p id="mensaje-busqueda"></p>
+</section>
+
+<script>
+    function mostrarMensaje() {
+        const mensajes = [
+            "📸 Captura la esencia de cada momento.",
+            "📖 La mejor foto es la que cuenta una historia.",
+            "🖼️ Cada imagen es un reflejo del alma del fotógrafo.",
+            "👀 Atrévete a ver el mundo desde otra perspectiva.",
+            "📷 La fotografía no se trata de la cámara, sino del ojo que la usa.",
+            "🌞 Luz, sombra y emoción: la receta perfecta para una gran foto.",
+            "⏳ Cada foto es un instante eterno en el tiempo.",
+            "🎨 La creatividad es el único límite en la fotografía.",
+            "🌟 Las fotos más hermosas nacen en los momentos más inesperados.",
+            "🔍 Encuentra la belleza en los pequeños detalles."
+        ];
+        const mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
+        document.getElementById("mensaje-busqueda").innerText = mensajeAleatorio;
+    }
+</script>
+
+<section id="imagenes">
+    <h2>📸 Galería de Imágenes</h2>
+    <div class="galeria">
+        <div class="imagen-item"><img src="imagenes/foto1.jpeg" alt="Foto 1"></div>
+        <div class="imagen-item"><img src="imagenes/foto2.jpeg" alt="Foto 2"></div>
+        <div class="imagen-item"><img src="imagenes/foto3.jpeg" alt="Foto 3"></div>
+        <div class="imagen-item"><img src="imagenes/foto4.jpeg" alt="Foto 4"></div>
+        <div class="imagen-item"><img src="imagenes/foto5.jpeg" alt="Foto 5"></div>
+        <div class="imagen-item"><img src="imagenes/foto6.jpeg" alt="Foto 6"></div>
+        <div class="imagen-item"><img src="imagenes/foto7.jpeg" alt="Foto 7"></div>
+        <div class="imagen-item"><img src="imagenes/foto8.jpeg" alt="Foto 8"></div>
+        <div class="imagen-item"><img src="imagenes/foto9.jpeg" alt="Foto 9"></div>
+        <div class="imagen-item"><img src="imagenes/foto10.jpeg" alt="Foto 10"></div>
+        <div class="imagen-item"><img src="imagenes/foto11.jpeg" alt="Foto 11"></div>
+        <div class="imagen-item"><img src="imagenes/foto12.jpeg" alt="Foto 12"></div>
+    </div>
+</section>
+
+    <!-- Controles de navegación -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+    <!-- Controles de navegación -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+    </div>
+    <!-- Controles de navegación -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+    </div>
+
+    <section id="videos">
+        <h2>🎥 Videos Inspiradores sobre Fotografía</h2>
+    
+        <!-- Video 1 -->
+        <video width="100%" controls>
+            <source src="videO/Micro reportaje_ Historia de la fotografía.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    
+        <br><br>
+    
+        <!-- Video 2 -->
+        <video width="100%" controls>
+            <source src="video/FOTOGRAFÍA BÁSICA - Curso para principiantes!.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    
+        <br><br>
+    
+        <!-- Video 3 -->
+        <video width="100%" controls>
+            <source src="video/20 IDEAS para la FOTOGRAFÍA DE CALLE (Street Photography) - OSCARENFOTOS.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    
+    </section>
+    
+    
+
+
+
+</body>
+</html>
